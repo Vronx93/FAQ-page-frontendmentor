@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family:'Work Sans', 'sans-serif';
+    flex-direction: column;
+    min-height: 100svh;
+}
+ 
+main {
+    font-family:'Work Sans', 'sans-serif';
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    background-color: var(--White);
+    width: 50%;
+    padding: 1.4rem;
+    box-shadow: 0px 0px 100px -30px var(--Grayish-purple);
+    border-radius: 1rem;
+}
+
+#background-img {
+    content: url(assets/images/background-pattern-desktop.svg);
+    width: -webkit-fill-available;
+    position: absolute;
+    top: 0;
+}
+
+h1::before {
+    content: url(assets/images/icon-star.svg);
+    box-sizing: border-box;
+    float: left;
+    margin-right: 30px;
+}
+
+h1 {
+    display: flex;
+    font-size: 3.5rem;
+    font-family: 'Work Sans';
+    align-items: center;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+li:active {
+    color: var(--Grayish-purple);
+}
+
+.symbol {
+    margin-left: 20px;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--Dark-purple);
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.attribution { 
+    position: absolute;
+    font-size: 11px;
+    min-width: max-content;
+    bottom: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+.break-line {
+    border-bottom: 1px solid var(--Light-pink);
+    height: 1px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 550px) {
+
+    main{
+        position: relative;
+        width: 90%;
+        border-radius: 0.5rem;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h1::before {
+        scale: 0.6;
+    }
+    
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    #background-img {
+        content: url(assets/images/background-pattern-mobile.svg);
+    }
+
+    .attribution { 
+        bottom: 10px;
+    }
+  }
